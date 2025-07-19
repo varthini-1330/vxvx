@@ -2,7 +2,7 @@ require('dotenv').config();
 const WebSocket = require('ws');
 const axios = require('axios');
 
-const VAPI_WS_URL = process.env.VAPI_WS_URL;
+const VAPI_WS_URL = process.env.VAPI_WS_URL || "wss://api.vapi.ai/websocket/v1";
 
 const exotelWSServer = new WebSocket.Server({ port: 5003 });
 console.log("🔌 Exotel ↔ Vapi WebSocket bridge listening on ws://localhost:5003");
